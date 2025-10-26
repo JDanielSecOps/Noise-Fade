@@ -1,0 +1,203 @@
+
+
+.main{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap:1rem;
+    margin-top: 2rem;
+}
+
+
+.upload-title{
+
+    font-size: x-large;
+    font-weight: 600;
+}
+
+
+.upload{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 1rem;
+}
+
+
+.boxstyle{
+    
+    border: 2px solid;
+    border-color: (--border-color);
+    border-radius: 15px;
+    padding:10rem;
+}
+
+.input-align{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 1rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.labels{
+    font-size: large;
+    font-weight: 600;
+}
+
+
+.file{
+    background-color:var(--button-color);
+    color: var(--font-color-contrast);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 15px;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.button-align{
+
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.submit-btn{
+    background-color:var(--button-color);
+    color: var(--font-color-contrast);
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    text-align: center;
+    align-self: flex-end;
+    border-radius: 15px;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.download-container{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 1rem;
+}
+
+.download-title{
+
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.download-btn{
+    
+    background-color:var(--button-color);
+    color: var(--font-color-contrast);
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    text-align: center;
+    align-self: flex-end;
+    border-radius: 15px;
+}
+
+.output{
+
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    justify-content: start;
+    gap: 1rem;
+}
+
+
+
+@media(max-width:850px){
+
+    .boxstyle{
+        
+       padding: 10rem 5rem 10rem 5rem;
+    }
+}
+
+
+
+
+
+@media(max-width:630px){
+
+
+    .boxstyle{
+        
+       padding: 10rem 1rem 10rem 1rem;
+    }
+
+    .input-align{
+        
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: flex-start;
+    }
+
+    .file{
+       
+        align-self: flex-start;
+    }
+
+    .submit-btn{
+        text-align: center;
+        align-self: flex-end;
+    }
+
+}
+
+
+@media(max-width:420px){
+
+
+    .boxstyle{
+        
+       padding: 10rem 0.1rem 10rem 0.1rem;
+       margin: 16px;
+    }
+
+
+    .file{
+        
+        padding:0.5rem;
+        width: 90%;
+        align-self: center;
+    }
+
+    .button-align{
+        margin: auto 1rem auto auto;
+    }
+
+    .upload-title{
+        align-self: center;
+    }
+
+    .download-title{
+        align-self: center;
+    }
+
+    .labels{
+        align-self: center;
+    }
+
+    .input-align{
+        padding: 1rem;
+    }
+
+    .output{
+        padding: 1rem;
+    }
+
+
+}

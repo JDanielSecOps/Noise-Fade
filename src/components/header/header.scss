@@ -1,0 +1,51 @@
+
+
+
+
+.header-svg{
+
+    fill: var(--header-svg-color);
+    height:56px;
+    width:56px;
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out ,fill 0.5s ease-in-out;
+}
+
+.header-svg:hover{
+    
+    fill: rgba(153, 0, 255, 0.726);
+    transform: scale(1.2);
+}
+
+
+.header-main{
+
+    display: flex;
+    flex-direction: row;
+    margin-top:1rem;
+}
+
+.header-title-svg{
+
+    display: flex;
+    flex-direction: row;
+    margin-left: 1rem;
+    font-size: xx-large;
+    gap: 2rem;
+}
+
+.header-toggle{
+
+    align-self: flex-end;
+    margin: auto 1rem auto auto;
+}
+
+
+
+
+@media(max-width:420px){
+    
+    .header-title{
+        display: none;
+    }
+}
