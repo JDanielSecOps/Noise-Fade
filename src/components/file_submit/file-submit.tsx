@@ -3,9 +3,9 @@ import "@/components/file_submit/file-submit.scss"
 import { useMutation } from "@tanstack/react-query"
 import React, { useEffect, useRef, useState } from "react"
 import { toast } from "sonner"
-import {saveAs} from "file-saver"
 import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/src/styles.scss'
+import { saveAs } from 'file-saver';
+
 import {motion} from "motion/react"
 
 type propstype={
@@ -43,7 +43,7 @@ const FileSubmit =(props : propstype)=>{
             const formdata =new FormData()
             formdata.append('file',file)
 
-            const response = await fetch("localhost:8000/upload",{
+            const response = await fetch("http://localhost:8000/upload",{
 
                 method:"POST",
                 body:formdata
@@ -128,11 +128,12 @@ const FileSubmit =(props : propstype)=>{
             <div className="labels">Orignal Audio</div>
             <input type="file"  className="file" onChange={handleChange} required></input>
              {originalaudiourl && (
-                    <AudioPlayer className="input-audio"
-                        src={originalaudiourl}
-                        showJumpControls={false}
-                        showSkipControls={false}
-                        showFilledVolume={false}
+                    <AudioPlayer 
+                    className="input-audio"
+                    src={originalaudiourl}
+                    showJumpControls={false}
+                    showSkipControls={false}
+                    showFilledVolume={false}
                     />
             )}
             <div className="button-align">
