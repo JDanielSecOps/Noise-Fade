@@ -4,10 +4,10 @@
 
 @use 'react-h5-audio-player/src/styles.scss' with (
 
-    $rhap_theme-color: var(--svg-color) ,// Color of all buttons and volume/progress indicators
-    $rhap_background-color:var(--contrast-bg) , // Color of the player background
-    $rhap_bar-color:var(--svg-color),     // Color of volume and progress bar
-    $rhap_time-color: var(--font-color-contrast) ,       // Font color of current time and duration
+    $rhap_theme-color: var(--svg-color) ,
+    $rhap_background-color:var(--contrast-bg) , 
+    $rhap_bar-color:var(--svg-color),     
+    $rhap_time-color: var(--font-color-contrast) ,      
     $rhap_font-family: inherit ,
 
 );
@@ -18,6 +18,11 @@
 
 
 .input-audio{
+
+    border-radius: 15px;
+}
+
+.output-audio{
 
     border-radius: 15px;
 }
