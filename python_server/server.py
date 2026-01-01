@@ -1,6 +1,8 @@
+from pathlib import Path
 from typing import Union
 from fastapi import FastAPI
 from df import enhance,init_df
+from fastapi.staticfiles import StaticFiles
 import soundfile as sf
 import numpy as np
 import torch
@@ -21,6 +23,7 @@ df_state = None
 
 
 
+
 @asynccontextmanager
 async def lifespan(server: FastAPI):
 
@@ -38,6 +41,9 @@ origins =["*"]
 server.add_middleware(CORSMiddleware,allow_origins=origins,
                       allow_credentials=True,allow_headers=["*"],allow_methods=["*"])
 
+server_path=Path(__file__).resolve().parent
+static_folder =server_path.parent/"dist"
+print(static_folder)
 
 
 
@@ -91,7 +97,7 @@ async def file_denoise(request : Request):
         media_type="audio/mpeg"
     )
 
-
+server.mount("/",StaticFiles(directory=static_folder,html=True),name="static")
 
 if __name__ =="__main__":
     
