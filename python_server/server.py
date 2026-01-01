@@ -36,10 +36,6 @@ async def lifespan(server: FastAPI):
 
 server =FastAPI(lifespan=lifespan)
 
-origins =["*"]
-
-server.add_middleware(CORSMiddleware,allow_origins=origins,
-                      allow_credentials=True,allow_headers=["*"],allow_methods=["*"])
 
 server_path=Path(__file__).resolve().parent
 static_folder =server_path.parent/"dist"
